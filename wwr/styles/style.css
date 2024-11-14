@@ -293,3 +293,17 @@ main section img {
     margin-top: 25px;
   }
 }
+
+#active {
+  border: 3px solid pink;
+}
+
+/* start Styles specific to Contact Page */
+.contact-grid {
+}
+
+.contact-grid img.card-img {
+  width: 100px;
+}
+
+/* end Styles specific to Contact Page */
