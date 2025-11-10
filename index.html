@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Welcome to BYU-Idaho!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+      }
+      .hero {
+        position: relative;
+        height: 500px;
+        background: #006eb6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .hero h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .hero p {
+        font-size: 1.5em;
+        max-width: 800px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      .content {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      .quote-section {
+        background: #f4f4f4;
+        border-left: 5px solid #003366;
+        padding: 30px;
+        margin: 40px 0;
+        font-style: italic;
+      }
+      .quote-section blockquote {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      .quote-section cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+        color: #666;
+        font-weight: bold;
+      }
+      .info-section {
+        margin: 40px 0;
+      }
+      .info-section h2 {
+        color: #003366;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #003366;
+        padding-bottom: 10px;
+      }
+      ol {
+        margin-left: 20px;
+        margin-top: 15px;
+      }
+      li {
+        margin: 10px 0;
+      }
+      code {
+        background: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+      }
+      a {
+        color: #003366;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Hello BYU-Idaho!</h1>
+      <p>
+        An incredible journey of learning, faith, and service awaits you in
+        Rexburg!
+      </p>
+    </div>
+
+    <div class="content">
+      <div class="quote-section">
+        <blockquote>
+          "In this special and sacred and set apart place, you and I have access
+          to unparalleled spiritual resources that can assist us in developing
+          and deepening our devotion as disciples of the Lord Jesus Christ."
+          <cite
+            >— Elder David A. Bednar
+            <br />
+            "Brigham Young University-Idaho: A Disciple Preparation Center,"
+            August 31, 2004</cite
+          >
+        </blockquote>
+      </div>
+
+      <div class="info-section">
+        <h2>Installing Git</h2>
+        <ol>
+          <li>
+            Download Git from
+            <a
+              href="https://git-scm.com/downloads"
+              target="_blank"
+              >git-scm.com/downloads</a
+            >
+          </li>
+          <li>Run the installer and follow the setup wizard</li>
+          <li>Accept the default settings (recommended for beginners)</li>
+          <li>
+            Verify installation by opening a terminal and typing:
+            <code>git --version</code>
+          </li>
+        </ol>
+      </div>
+
+      <div class="info-section">
+        <h2>Adding This Repo to GitHub</h2>
+        <ol>
+          <li>
+            Create a new repository on
+            <a
+              href="https://github.com"
+              target="_blank"
+              >GitHub.com</a
+            >
+          </li>
+          <li>Open a terminal in your project folder</li>
+          <li>Initialize Git: <code>git init</code></li>
+          <li>Add your files: <code>git add .</code></li>
+          <li>
+            Commit your changes: <code>git commit -m "Initial commit"</code>
+          </li>
+          <li>
+            Link to GitHub:
+            <code
+              >git remote add origin
+              https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git</code
+            >
+          </li>
+          <li>
+            Push to GitHub: <code>git branch -M main</code> then
+            <code>git push -u origin main</code>
+          </li>
+        </ol>
+      </div>
+
+      <div class="info-section">
+        <h2>Common Issues & Solutions</h2>
+
+        <h3 style="color: #003366; margin-top: 25px; margin-bottom: 10px">
+          1. "Git is not recognized as a command"
+        </h3>
+        <p>
+          <strong>Problem:</strong> After installing Git, the terminal doesn't
+          recognize git commands.
+        </p>
+        <p>
+          <strong>Solution:</strong> Restart your terminal/computer after
+          installation. If the issue persists, manually add Git to your PATH
+          environment variable (usually <code>C:\Program Files\Git\cmd</code> on
+          Windows).
+        </p>
+
+        <h3 style="color: #003366; margin-top: 25px; margin-bottom: 10px">
+          2. Authentication Failed / Permission Denied
+        </h3>
+        <p>
+          <strong>Problem:</strong> Unable to push to GitHub with username and
+          password.
+        </p>
+        <p>
+          <strong>Solution:</strong> GitHub no longer accepts passwords for
+          authentication. You need to use a Personal Access Token (PAT):
+        </p>
+        <ul style="margin-left: 20px; margin-top: 10px">
+          <li>
+            Go to GitHub Settings → Developer settings → Personal access tokens
+            → Tokens (classic)
+          </li>
+          <li>Generate a new token with 'repo' permissions</li>
+          <li>Use the token as your password when prompted</li>
+          <li>Better yet, set up SSH keys for permanent authentication</li>
+        </ul>
+
+        <h3 style="color: #003366; margin-top: 25px; margin-bottom: 10px">
+          3. "Fatal: remote origin already exists"
+        </h3>
+        <p>
+          <strong>Problem:</strong> Trying to add a remote that's already
+          configured.
+        </p>
+        <p>
+          <strong>Solution:</strong> Either remove the existing remote first
+          with <code>git remote remove origin</code>, or update it with
+          <code>git remote set-url origin YOUR-NEW-URL</code>
+        </p>
+
+        <h3 style="color: #003366; margin-top: 25px; margin-bottom: 10px">
+          4. Merge Conflicts
+        </h3>
+        <p>
+          <strong>Problem:</strong> Git can't automatically merge changes when
+          pulling or merging branches.
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 10px">
+          <li>
+            Open the conflicted files (marked with &lt;&lt;&lt;&lt;&lt;,
+            =======, and &gt;&gt;&gt;&gt;&gt;&gt;)
+          </li>
+          <li>Manually edit to keep the desired changes</li>
+          <li>Remove the conflict markers</li>
+          <li>
+            Run <code>git add .</code> then
+            <code>git commit -m "Resolved merge conflict"</code>
+          </li>
+        </ul>
+
+        <h3 style="color: #003366; margin-top: 25px; margin-bottom: 10px">
+          5. "Nothing added to commit"
+        </h3>
+        <p>
+          <strong>Problem:</strong> Trying to commit but forgot to stage files.
+        </p>
+        <p>
+          <strong>Solution:</strong> Use <code>git add .</code> to stage all
+          changes, or <code>git add filename</code> for specific files, before
+          running <code>git commit</code>
+        </p>
+
+        <h3 style="color: #003366; margin-top: 25px; margin-bottom: 10px">
+          6. Accidentally Committed to Wrong Branch
+        </h3>
+        <p>
+          <strong>Problem:</strong> Made commits on the main branch instead of a
+          feature branch.
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 10px">
+          <li>Create a new branch: <code>git branch feature-branch</code></li>
+          <li>
+            Reset main branch: <code>git reset HEAD~1 --hard</code> (use
+            carefully!)
+          </li>
+          <li>
+            Switch to your feature branch:
+            <code>git checkout feature-branch</code>
+          </li>
+        </ul>
+
+        <h3 style="color: #003366; margin-top: 25px; margin-bottom: 10px">
+          7. "Updates were rejected"
+        </h3>
+        <p>
+          <strong>Problem:</strong> Can't push because remote has changes you
+          don't have locally.
+        </p>
+        <p>
+          <strong>Solution:</strong> Pull the changes first with
+          <code>git pull origin main</code>, resolve any conflicts, then push
+          again with <code>git push origin main</code>
+        </p>
+
+        <p><strong>Problem:</strong> Git asks for user.email and user.name.</p>
+        <p><strong>Solution:</strong> Set your identity globally:</p>
+        <ul style="margin-left: 20px; margin-top: 10px">
+          <li><code>git config --global user.name "Your Name"</code></li>
+          <li>
+            <code>git config --global user.email "your.email@example.com"</code>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
